@@ -11,4 +11,10 @@ No obstante, multiple bibliografia detalla que la recursividad se pude clasifica
 
 Para cumplir con los objetivos del presente, se limitarán los ejemplos a *recursividad directa*.
 
-### Eje
+Es produnte enunciar que las funciones recursivas deben cumplir dos condiciones principales:
+
+* Llamada de expansión. Sentencia cuyo objetivo es realizar las llamadas autoreferenciadas de la función. Se le puede llamar de expansión, porqué cada llamada nueva agrega una copia de sus datos a la pila de ejecución de la Máquina Virtual del Lenguaje o la pila de ejecución de la CPU, es decir la función se expande.
+
+* Condición de colapso. También llamada de cierre es una condición en la cual la función termina y comienza el proceso de cerrar las ejecuciones previas de la pila de ejecución, es decir la función colapsa.
+
+Un ejemplo sencillo de recursividad es imprimir todos los números previos desde N hasta 0.

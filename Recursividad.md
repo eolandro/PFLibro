@@ -21,3 +21,14 @@ Un ejemplo sencillo de recursividad es imprimir todos los números previos desde
 
 Veamos este ejemplo en python:
 
+```python
+
+def imprimir_anteriores(N):
+    if N == 0: # Colapso
+        print(N)
+        return
+    print(N)
+    imprimir_anteriores(N-1) #expansion
+
+
+```

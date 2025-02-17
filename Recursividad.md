@@ -13,7 +13,7 @@ Es produnte enunciar que las funciones recursivas deben cumplir dos caracteristi
 
 * Llamada de expansión. Sentencia cuyo objetivo es realizar las llamadas autoreferenciadas de la función. Es de expansión, porqué cada llamada nueva agrega una copia de sus datos<sub>?</sub> a la pila de ejecución de la Máquina Virtual del Lenguaje o la pila de ejecución de la CPU, es decir la función se expande.
 
-* Condición de colapso. También llamada de cierre, es una condición en la cual la función termina y comienza el proceso (o no) de cerrar las ejecuciones previas de si misma en la pila de ejecución, es decir la función colapsa.
+* Condición de colapso. También llamada de cierre o caso base, es una condición en la cual la función termina y comienza el proceso (o no) de cerrar las ejecuciones previas de si misma en la pila de ejecución, es decir la función colapsa.
 
 Para cumplir con los objetivos del presente, se limitarán los ejemplos a *recursividad directa*.
 

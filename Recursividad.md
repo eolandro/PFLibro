@@ -32,3 +32,8 @@ def imprimir_anteriores(N):
 
 
 ```
+Si se analiza el código, vemos que los comentarios ya nos indican donde está la condición de colapso y la sentencia de expansión. Para entender del funcionamiento, de las anteriores suponga que ejecutamos la función con el parámetro N = 0.
+```
+imprimir_anteriores(0)
+0
+```

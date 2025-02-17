@@ -37,3 +37,8 @@ Si se analiza el código, vemos que los comentarios ya nos indican donde está l
 imprimir_anteriores(0)
 0
 ```
+Podemos generar la siguiente tabla al ejecutar instrucción por instrucción 
+Instrucción|Variables|Resultado
+```if (N == 0):```| N -> 0 | True, entra en el if
+```print(N)```| N -> 0 | Salida en consola "0"
+```return```| N -> 0 | Termina función 

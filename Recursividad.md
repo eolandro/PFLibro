@@ -43,3 +43,24 @@ Podemos generar la siguiente tabla al ejecutar instrucción por instrucción
 |```if (N == 0):```| N -> 0 | True, entra en el if |
 |```print(N)```| N -> 0 | Salida en consola "0" |
 |```return```| N -> 0 | Termina función |
+La función colapsa en N = 0, porque es el caso base de la función, * es recomendable comenzar siempre por el caso base *. No obstante en esta ejecución la función jamas se ha expandido, si queremos ver qué esto suceda. Tendremos que evaluar con N > 0, por ejemplo suponga N = 2
+```
+imprimir_anteriores(2)
+2
+1
+0
+```
+La tabla de ejecución sería la siguiente:
+| Instrucción | Variables | Resultado |
+|-------------|-----------|-----------|
+|```if (N == 0):```| N -> 2 | False, no entra al if |
+|```print(N)```| N -> 2 | Salida en consola "2" |
+|```imprimir_anteriores(N - 1)```| N -> 2 | Resta 2-1, expansión de la función|
+|```if (N == 0):```| N -> 1 | False, no entra al if |
+|```print(N)```| N -> 1 | Salida en consola "1" |
+|```imprimir_anteriores(N - 1)```| N -> 1 | Resta 1-1, expansión de la función|
+|```if (N == 0):```| N -> 0 | True, entra en el if |
+|```print(N)```| N -> 0 | Salida en consola "0" |
+|```return```| N -> 0 | Termina función |
+|| N -> 1 | Termina función |
+|| N -> 2 | Termina función |

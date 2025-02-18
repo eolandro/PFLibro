@@ -17,9 +17,11 @@ Es produnte enunciar que las funciones recursivas deben cumplir dos caracteristi
 
 Para cumplir con los objetivos del presente, se limitarán los ejemplos a *recursividad directa*.
 
+### Python
+
 Un ejemplo sencillo de recursividad es imprimir todos los números previos desde N hasta 0.
 
-Veamos este ejemplo en python:
+Veamos una implementación en python:
 
 ```python
 
@@ -40,11 +42,11 @@ imprimir_anteriores(0)
 Podemos generar la siguiente tabla al ejecutar instrucción por instrucción 
 | Instrucción | Variables | Resultado |
 |-------------|-----------|-----------|
-|```if (N == 0):```| N -> 0 | True, entra en el if |
+|```if N == 0:```| N -> 0 | True, entra en el if |
 |```print(N)```| N -> 0 | Salida en consola "0" |
 |```return```| N -> 0 | Termina función |
 
-La función colapsa en N = 0, porque es el caso base de la función, * es recomendable comenzar siempre por el caso base *. No obstante en esta ejecución la función jamas se ha expandido, si queremos ver qué esto suceda. Tendremos que evaluar con N > 0, por ejemplo suponga N = 2.
+La función colapsa en N = 0, porque es el caso base de la función, *es recomendable comenzar siempre por el caso base*. No obstante en esta ejecución la función jamas se ha expandido, si queremos ver qué esto suceda. Tendremos que evaluar con N > 0, por ejemplo suponga N = 2.
 
 ```
 imprimir_anteriores(2)
@@ -55,14 +57,64 @@ imprimir_anteriores(2)
 La tabla de ejecución sería la siguiente:
 | Instrucción | Variables | Resultado |
 |-------------|-----------|-----------|
-|```if (N == 0):```| N -> 2 | False, no entra al if |
+|```if N == 0:```| N -> 2 | False, no entra al if |
 |```print(N)```| N -> 2 | Salida en consola "2" |
 |```imprimir_anteriores(N - 1)```| N -> 2 | Resta 2-1, expansión de la función|
-|```if (N == 0):```| N -> 1 | False, no entra al if |
+|```if N == 0:```| N -> 1 | False, no entra al if |
 |```print(N)```| N -> 1 | Salida en consola "1" |
 |```imprimir_anteriores(N - 1)```| N -> 1 | Resta 1-1, expansión de la función|
-|```if (N == 0):```| N -> 0 | True, entra en el if |
+|```if N == 0:```| N -> 0 | True, entra en el if |
 |```print(N)```| N -> 0 | Salida en consola "0" |
 |```return```| N -> 0 | Termina función |
 || N -> 1 | Termina función |
 || N -> 2 | Termina función |
+
+Puede llegar a ser enajenante, las ultimas 2 filas, pero hay que recordar que cada ejecución de una función toma un nuevo lugar dentro de la pila de ejecución y este lugar será liberado hasta que la ejecución de dicha función termine.
+Esto significa que cuando se llama a 'imprimir_anteriores(1)', existe una 'imprimir_anteriores(2)' que está en espera de que termine la primera, asi mismo cuando se llama 'imprimir_anteriores(0)', existe una 'imprimir_anteriores(1)' que tambien esta en espera. 
+Cuando 'imprimir_anteriores(0)' finalmente termina su ejecución, 'imprimir_anteriores(1)' termina inmediatamente y  posteriormente 'imprimir_anteriores(2)' lo que libera la pila de ejecución.
+
+### Javascript (EmacScript)
+
+Siguiendo con el mismo ejemplo de imprimir todos los números previos desde N hasta 0.
+
+```javascript
+
+function imprimir_anteriores(N){
+    if (N == 0){ // Colapso
+        console.log(N);
+        return;
+    }
+    console.log(N);
+    imprimir_anteriores(N-1); //expansion
+}
+
+```
+Se puede observar que la implementación del código no difiere tanto, esto es por que tanto Python como Javascript son lenguajes por asi decirlo *primos* y tienen una relación notable con lenguaje C. Obviamente instrucciones como 'print' e 'if' de python, debieron ser adecuadas por sus contrapartes correspondientes en Javascript. No obstante en escencia es el mismo algoritmo.  Tambien se han agregado comentarios de donde esta la llamada de expasión y la condicin de colapso, por lo que basicamente la explicacion aplicada en python es la misma. 
+
+Supongamos que se ejecuta con N = 2.
+
+```
+imprimir_anteriores(2);
+2
+1
+0
+```
+
+La tabla de ejecucion seria la siguiente:
+
+| Instrucción | Variables | Resultado |
+|-------------|-----------|-----------|
+|```if (N == 0){```| N -> 2 | false, no entra al if |
+|```console.logt(N);```| N -> 2 | Salida en consola "2" |
+|```imprimir_anteriores(N - 1);```| N -> 2 | Resta 2-1, expansión de la función|
+|```if (N == 0){```| N -> 1 | false, no entra al if |
+|```console.logt(N);```| N -> 1 | Salida en consola "1" |
+|```imprimir_anteriores(N - 1);```| N -> 1 | Resta 1-1, expansión de la función|
+|```if (N == 0){```| N -> 0 | true, entra en el if |
+|```console.logt(N);```| N -> 0 | Salida en consola "0" |
+|```return```| N -> 0 | Termina función |
+|```}```| N -> 1 | Termina función |
+|```}```| N -> 2 | Termina función |
+
+Quiza una ventaja que tiene Javascript es que a diferecia de python aqui si se puede notar que las ultimas dos lineas cierran la ejecucion de la funcion, porque estas corresponden a las '}' correspondientes.
+Otro aspecto a notar es el estilo de sintaxis que se ha aplicado, 

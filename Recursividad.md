@@ -3,7 +3,7 @@
 Recordando el contexto historico de los lenguajes funcionales, siendo lisp uno de los pioneros, la forma en la cual este lenguaje es turing completo es la recursividad. Es importante tener en cuenta que esta es heredada directamente de la inspiracion base de lisp, el calculo lambda de Alonzo Church. <sub>Poner ref a la autoreferencia y la recursividad</sub>
 
 Esta es la razón por la cual la forma natural de iterar de muchos lenguajes funcionales y en general de muchos lenguajes declarativos es uso o abuso de la recursividad. 
-No obstante, multiple bibliografia detalla que la recursividad se pude clasificar de la siguiente manera: 
+Si revisamos bibliografia consolidada, está detalla que la recursividad se pude clasificar de la siguiente manera: 
 * Directa. Cuando una funcion se llama asi misma dentro de su cuerpo de fucion. F => F
 * Indirecta. Cuando una funcion se llama asi misma con el uso de una funcion auxiliar. F => P => F
 
@@ -116,5 +116,23 @@ La tabla de ejecucion seria la siguiente:
 |```}```| N -> 1 | Termina función |
 |```}```| N -> 2 | Termina función |
 
-Quiza una ventaja que tiene Javascript es que a diferecia de python aqui si se puede notar que las ultimas dos lineas cierran la ejecucion de la funcion, porque estas corresponden a las '}' correspondientes.
-Otro aspecto a notar es el estilo de sintaxis que se ha aplicado, 
+Quiza una ventaja que tiene Javascript es que a diferecia de python aqui si se puede notar que las ultimas dos lineas cierran la ejecución de la función, porque estas corresponden a las '}' al final del código.
+Otro aspecto a notar es el estilo de sintaxis que se ha aplicado, corresponde principalmente a Emacscript 6 e inferior, sin embargo esto  no implica que en los siguientes Temas no se use una sintaxis más moderna.
+
+### Elixir
+
+El trasladar el ejemplo a elixir tiene sus peculiaridades, recordemos que Python y Javascript son lenguajes esencialmente imperativos, pero elixir es un funcional impuro, que si bien se detallara más adelante el porque de la pureza, implica que elixir maneja de manera natural al recursividad.
+Del mismo modo, se está considerando que elixir pueda ser un lenguaje 
+
+```elixir
+
+function imprimir_anteriores(N){
+    if (N == 0){ // Colapso
+        console.log(N);
+        return;
+    }
+    console.log(N);
+    imprimir_anteriores(N-1); //expansion
+}
+
+```

@@ -121,18 +121,17 @@ Otro aspecto a notar es el estilo de sintaxis que se ha aplicado, corresponde pr
 
 ### Elixir
 
-El trasladar el ejemplo a elixir tiene sus peculiaridades, recordemos que Python y Javascript son lenguajes esencialmente imperativos, pero elixir es un funcional impuro, que si bien se detallara más adelante el porque de la pureza, implica que elixir maneja de manera natural al recursividad.
-Del mismo modo, se está considerando que elixir pueda ser un lenguaje 
+El trasladar el ejemplo a Elixir tiene sus peculiaridades, recordemos que Python y Javascript son lenguajes esencialmente imperativos, pero Elixir es un funcional impuro, que si bien se detallara más adelante el porque de la pureza, implica que elixir maneja de manera natural al recursividad.
+Del mismo modo, se está considerando que Elixir pueda ser un lenguaje ajeno, por lo que en esta ocasión el ejemplo será un poco más explicativo.
 
 ```elixir
-
-function imprimir_anteriores(N){
-    if (N == 0){ // Colapso
-        console.log(N);
-        return;
-    }
-    console.log(N);
-    imprimir_anteriores(N-1); //expansion
-}
-
+defmodule Recursividad do
+    def imprimir_anteriores(0) do
+        IO.puts(0)
+    end
+    def imprimir_anteriores(n) do
+        IO.puts(n)
+        imprimir_anteriores(n-1)
+    end
+end
 ```

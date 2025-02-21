@@ -135,4 +135,5 @@ defmodule Recursividad do # Definición de modulo
     end
 end
 ```
-En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada se su lenguaje padre *erlang*
+En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada se su lenguaje padre *erlang*.
+

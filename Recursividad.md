@@ -1,6 +1,6 @@
 ## Recursividad
 
-Recordando el contexto historico de los lenguajes funcionales, siendo lisp uno de los pioneros, la forma en la cual este lenguaje es turing completo es la recursividad. Es importante tener en cuenta que esta es heredada directamente de la inspiracion base de lisp, el calculo lambda de Alonzo Church. <sub>Poner ref a la autoreferencia y la recursividad</sub>
+Recordando el contexto histórico de los lenguajes funcionales, siendo Lisp uno de los pioneros, la forma en la cual este lenguaje es turing completo es la recursividad. Es importante tener en cuenta que esta es heredada directamente de la inspiracion base de Lisp, el calculo lambda de Alonzo Church. <sub>Poner ref a la autoreferencia y la recursividad</sub>
 
 Esta es la razón por la cual la forma natural de iterar de muchos lenguajes funcionales y en general de muchos lenguajes declarativos es uso o abuso de la recursividad. 
 Si revisamos bibliografia consolidada, está detalla que la recursividad se pude clasificar de la siguiente manera: 
@@ -100,7 +100,7 @@ imprimir_anteriores(2);
 0
 ```
 
-La tabla de ejecucion seria la siguiente:
+La tabla de ejecución seria la siguiente:
 
 | Instrucción | Variables | Resultado |
 |-------------|-----------|-----------|
@@ -135,5 +135,27 @@ defmodule Recursividad do # Definición de modulo
     end
 end
 ```
-En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada se su lenguaje padre *erlang*.
+En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada de su lenguaje padre *erlang*, para ver su funcionamiento vamos a ejecutar nuestro codigo y analizar la tabla de ejecución.
+
+1. Primero es necesario guardar el codigo anterior en un archivo llamado *recursividad.exs*, es importante que este en minusculas.
+2. Abre el interprete de comandos en la carperta donde hayas guardado a *recursividad.exs*.
+3. Ejecuta el comando ```iex -r recursividad.exs``` deberias ver al como lo siguiente:
+```
+iex -r recursividad.exs
+Erlang/OTP 27 [erts-15.1.2] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.18.0-dev) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)>
+```
+4. Escribe la llamada a la funcion con parametro N = 2.
+
+```
+iex(2)> Recursividad.imprimir_anteriores(2)
+2
+1
+0
+:ok
+```
+
+El *pattern matching* o coicidencia de patrones es una tecnica en la cual una expresión puede ser usada como una comparación y asignación al mismo tiempo, quiza un ejemplo similar seria el siguiente codigo en Javascript. ```if (a = true) {console.log('yei');}``` Aqui la variable 'a' le es asignado el valor de true, para entonces ser evaluada como cuerpo del if.
 

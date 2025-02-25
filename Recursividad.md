@@ -135,7 +135,9 @@ defmodule Recursividad do # Definición de modulo
     end
 end
 ```
-En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada de su lenguaje padre *erlang*, para ver su funcionamiento vamos a ejecutar nuestro codigo y analizar la tabla de ejecución.
+En elixir las funciones se definen dentro de un modulo, en este caso se llama *Recursividad*, Aqui lo que llama la atención es que la función imprimir_anteriores se define 2 veces y eso es porque elixir usa *pattern matching*, esta caracteristica es heredada de su lenguaje padre *erlang*. No obstante cada una de estas definiciones corresponde tanton a la condicion de colapso, como a la llamada de expansion, para ver su funcionamiento vamos a ejecutar nuestro codigo y analizar la tabla de ejecución.
+
+Sigue las estas instrucciones para ejecutar el código en elixir:
 
 1. Primero es necesario guardar el codigo anterior en un archivo llamado *recursividad.exs*, es importante que este en minusculas.
 2. Abre el interprete de comandos en la carperta donde hayas guardado a *recursividad.exs*.
@@ -149,7 +151,7 @@ iex(1)>
 ```
 4. Escribe la llamada a la funcion con parametro N = 2.
 
-```
+```elixir
 iex(2)> Recursividad.imprimir_anteriores(2)
 2
 1

@@ -142,8 +142,7 @@ Sigue las estas instrucciones para ejecutar el código en elixir:
 1. Primero es necesario guardar el codigo anterior en un archivo llamado *recursividad.exs*, es importante que este en minusculas.
 2. Abre el interprete de comandos en la carperta donde hayas guardado a *recursividad.exs*.
 3. Ejecuta el comando ```iex -r recursividad.exs``` deberias ver al como lo siguiente:
-```
-iex -r recursividad.exs
+```elixir
 Erlang/OTP 27 [erts-15.1.2] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [jit:ns]
 
 Interactive Elixir (1.18.0-dev) - press Ctrl+C to exit (type h() ENTER for help)

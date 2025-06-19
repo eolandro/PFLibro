@@ -1,0 +1,1 @@
+aquí colocar la propuesta de este patrón de diseño funcional

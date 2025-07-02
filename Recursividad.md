@@ -19,7 +19,7 @@ Es produnte enunciar que las funciones recursivas deben cumplir dos caracteristi
 
 Para cumplir con los objetivos del presente, se limitarán los ejemplos a *recursividad directa*.
 
-### Python
+## Python
 
 Un ejemplo sencillo de recursividad es imprimir todos los números previos desde N hasta 0.
 
@@ -82,7 +82,7 @@ Esto significa que cuando se llama a 'imprimir_anteriores(1)', existe una 'impri
 
 Cuando 'imprimir_anteriores(0)' finalmente termina su ejecución, 'imprimir_anteriores(1)' termina inmediatamente y  posteriormente 'imprimir_anteriores(2)' lo que libera la pila de ejecución.
 
-### Javascript (EmacScript)
+## Javascript (EmacScript)
 
 Siguiendo con el mismo ejemplo de imprimir todos los números previos desde N hasta 0.
 
@@ -128,7 +128,7 @@ La tabla de ejecución seria la siguiente:
 Quiza una ventaja que tiene Javascript es que a diferecia de python aqui si se puede notar que las ultimas dos lineas cierran la ejecución de la función, porque estas corresponden a las '}' al final del código.
 Otro aspecto a notar es el estilo de sintaxis que se ha aplicado, corresponde principalmente a Emacscript 6 e inferior, sin embargo esto  no implica que en los siguientes Temas no se use una sintaxis más moderna.
 
-### Elixir
+## Elixir
 
 Al trasladar el ejemplo a Elixir tiene sus peculiaridades, recordemos que Python y Javascript son lenguajes esencialmente imperativos, pero Elixir es un funcional impuro, que si bien se detallara más adelante el porque de la pureza, implica que elixir maneja de manera natural al recursividad.
 Del mismo modo, se está considerando que Elixir pueda ser un lenguaje ajeno, por lo que en esta ocasión el ejemplo será un poco más explicativo.

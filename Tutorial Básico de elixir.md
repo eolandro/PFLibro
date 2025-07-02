@@ -1,7 +1,7 @@
 # Elixir
 
 > **&#9432;** **NOTA:** 
-> Si prefieres utilizar Python o Javascript no es necesario que leas este capitulo, por lo que simplementepuedes saltarlo.
+> Si prefieres utilizar Python o Javascript no es necesario que leas este capitulo, por lo que simplemente puedes saltarlo.
 
 
 ## ¿Por que elixir?

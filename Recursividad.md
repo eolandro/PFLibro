@@ -1,4 +1,6 @@
-## Recursividad
+# Recursividad
+
+## La recursividad y los lenguajes de programación
 
 Recordando el contexto histórico de los lenguajes funcionales, siendo Lisp uno de los pioneros, la forma en la cual este lenguaje es turing completo es la recursividad. Es importante tener en cuenta que esta es heredada directamente de la inspiracion base de Lisp, el calculo lambda de Alonzo Church. <sub>Poner ref a la autoreferencia y la recursividad</sub>
 

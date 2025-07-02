@@ -1,9 +1,8 @@
----
-**NOTA**
+# Elixir
 
-Si prefieres utilizar Python o Javascript no es necesario que leas este capitulo, por lo que simplementepuedes saltarlo.
+> **&#9432;** **NOTA:** 
+> Si prefieres utilizar Python o Javascript no es necesario que leas este capitulo, por lo que simplementepuedes saltarlo.
 
----
 
 ## ¿Por que elixir?
 
